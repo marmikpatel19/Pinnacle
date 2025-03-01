@@ -1,0 +1,23 @@
+## Product
+
+- Two types of users
+  - Candidate (B2C) – primary user since this is for submitting basic apps
+  - Companies hiring (B2B) – secondary users who seek to control jobs for their company
+- Branding
+  - Let’s build something more luxurious, high-quality, high-end clients. This sounds different than recruitment platforms usually ⇒ fun, interesting.
+  - Basic personas:
+    - Company
+      - NeuronEdge, a Series B AI startup building LLM-powered dev tools, backed by Sequoia & a16z.
+      - Pain Points:
+        - Struggling to hire top-tier AI engineers who demand high salaries and equity.
+        - Recruiters are sending generic, mismatched candidates who don’t have the right research or engineering background.
+        - Traditional hiring platforms flood them with resumes, but they don’t have the bandwidth to filter the best.
+        - Needs a way to directly access top-tier, pre-vetted AI talent without wasting time.
+    - Candidate
+      - Sophia Chen, Staff Machine Learning Engineer, ex-Google Brain, now exploring leadership roles in AI startups.
+      - Pain Points:
+        - Gets spammed with irrelevant recruiter messages on LinkedIn.
+        - Finds FAANG and startup job portals overwhelming—too many low-effort applications.
+        - Doesn’t want to publicly announce job searching (privacy concerns).
+        - Prefers selective, high-impact opportunities rather than mass-market hiring.
+        - Wants white-glove treatment—a recruiter who understands her niche expertise.
