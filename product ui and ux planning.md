@@ -28,3 +28,23 @@
         - Comp (product: high-quality candidates & companies ⇒ transparency)
     - Applied
       - Shows roles applied to. Same style as above (clicking opens the app), but no option to submit
+
+## UX
+
+- Responsive (product: high-quality candidates ⇒ busy and more likely to use phone)
+- Feedback for actions
+- Easy navigation
+- personalization (specific jobs only: part of feature above)
+
+## UI
+
+- minimalist (product: high-quality candidates ⇒ strsaight to the point)
+- Typography
+  - Bentham: classic, serif (product: high-quality candidates ⇒ sophistication) https://fonts.google.com/specimen/Bentham
+- color
+  - primary: charcoal #0D0D0D
+  - secondary: #3672ad
+- dark mode by default
+  - the charcoal as defauly color
+  - primary text: off-white #E0E0E0
+  - accents & highlights: #3672ad
