@@ -1,23 +1,30 @@
 ## Product
 
-- Two types of users
-  - Candidate (B2C) – primary user since this is for submitting basic apps
-  - Companies hiring (B2B) – secondary users who seek to control jobs for their company
-- Branding
+- User
+  - Candidate (B2C)–primary user since this is for submitting basic apps
+  - (for the future–not for this project: Companies hiring (B2B)--secondary users who seek to control jobs for their company)
+- Branding & features
   - Let’s build something more luxurious, high-quality, high-end clients. This sounds different than recruitment platforms usually ⇒ fun, interesting.
-  - Basic personas:
-    - Company
-      - NeuronEdge, a Series B AI startup building LLM-powered dev tools, backed by Sequoia & a16z.
-      - Pain Points:
-        - Struggling to hire top-tier AI engineers who demand high salaries and equity.
-        - Recruiters are sending generic, mismatched candidates who don’t have the right research or engineering background.
-        - Traditional hiring platforms flood them with resumes, but they don’t have the bandwidth to filter the best.
-        - Needs a way to directly access top-tier, pre-vetted AI talent without wasting time.
-    - Candidate
-      - Sophia Chen, Staff Machine Learning Engineer, ex-Google Brain, now exploring leadership roles in AI startups.
-      - Pain Points:
-        - Gets spammed with irrelevant recruiter messages on LinkedIn.
-        - Finds FAANG and startup job portals overwhelming—too many low-effort applications.
-        - Doesn’t want to publicly announce job searching (privacy concerns).
-        - Prefers selective, high-impact opportunities rather than mass-market hiring.
-        - Wants white-glove treatment—a recruiter who understands her niche expertise.
+  - Basic persona (candidate):
+    - Sophia Chen, Staff Machine Learning Engineer, ex-Google Brain, now exploring leadership roles in AI startups.
+    - Pain Points:
+      - Gets spammed with irrelevant recruiter messages on LinkedIn.
+      - Finds FAANG and startup job portals overwhelming—too many low-effort applications.
+      - Doesn’t want to publicly announce job searching (privacy concerns).
+      - Prefers selective, high-impact opportunities rather than mass-market hiring.
+      - Wants white-glove treatment—a recruiter who understands her niche expertise.
+  - Features based on brand
+    - Pinnacle branding
+    - Hello, name.
+    - Shows a list of applications they’ve been invited to fill out. Clicking on one opens the app (product: high-quality candidates ⇒ they’re not looking to search for jobs and apply, and instead only apply due to personal outreach)
+    - The app
+      - One-click apply
+      - Mentions who referred them. Allows a contact option. (product: high-quality candidates ⇒ direct connection to recruiter)
+      - Hides applicant information, but clicking it opens it all up and allows changing (product: high-quality candidates ⇒ no time wasting filling out fields, but option in case they want to)
+        - Fields: name, resume, website/twitter/linkedin, phone, email
+      - Job
+        - Role, company, location, id, posted date
+        - Brief description (product: high-quality candidates & companies ⇒ succinct)
+        - Comp (product: high-quality candidates & companies ⇒ transparency)
+    - Applied
+      - Shows roles applied to. Same style as above (clicking opens the app), but no option to submit
