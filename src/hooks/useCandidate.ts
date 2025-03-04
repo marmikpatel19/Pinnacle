@@ -17,9 +17,11 @@ export type Job = {
     title: string;
     company: string;
     pointOfContact: string;
+    pointOfContactEmail: string;
     location: string;
     postedDate: string;
     applied: boolean;
+    description: string;
 };
 
 const MOCK_API_ROUTE = "https://backend/api/candidate/id";
@@ -60,48 +62,58 @@ const useCandidate = () => {
     const mockJobs: Job[] = [
         {
             id: "1",
-            title: "Staff Engineer (Web)",
+            title: "Staff Engineer (ChatGPT Premium)",
             company: "OpenAI",
             pointOfContact: "Kalie Scoren",
-            location: "New York",
-            postedDate: "2025-01-01",
-            applied: false
+            pointOfContactEmail: "kalie@openai.com",
+            location: "San Francisco, CA",
+            postedDate: "2025-03-01",
+            applied: false,
+            description: "The Growth team at OpenAI is responsible for expanding the reach and impact of our AI products, including ChatGPT and other offerings. We focus on optimizing user acquisition, subscriptions, engagement, and retention, ensuring that millions of users find long-term value in our products."
         },
         {
             id: "2",
             title: "Member of Technical Staff", 
             company: "Anthropic",
             pointOfContact: "Arjun Shubham",
-            location: "San Francisco",
-            postedDate: "2025-01-01",
-            applied: false
+            pointOfContactEmail: "arjun@anthropic.com",
+            location: "New York, NY",
+            postedDate: "2025-01-06",
+            applied: false,
+            description: "We are looking for a Member of Technical Staff to join our team. This is a great opportunity for someone who is passionate about building scalable and efficient web applications."
         },
         {
             id: "3",
             title: "Staff Engineer", 
             company: "Paraform",
             pointOfContact: "Linus Lu",
-            location: "San Francisco",
+            pointOfContactEmail: "linus@paraform.com",
+            location: "San Francisco, CA",
             postedDate: "2025-01-01",
-            applied: false
+            applied: false,
+            description: "We are looking for a Staff Engineer to join our team. This is a great opportunity for someone who is passionate about building scalable and efficient web applications."
         },
         {
             id: "4",
             title: "Staff Engineer", 
             company: "Meta",
             pointOfContact: "Jason Liu",
-            location: "San Francisco",
+            pointOfContactEmail: "jason@meta.com",
+            location: "New York, NY",
             postedDate: "2025-01-01",
-            applied: true
+            applied: true,
+            description: "We are looking for a Staff Engineer to join our team. This is a great opportunity for someone who is passionate about building scalable and efficient web applications."
         },
         {
             id: "5",
             title: "Staff Engineer (Backend)", 
             company: "Google",
             pointOfContact: "Grace Wong",
-            location: "San Francisco",
+            pointOfContactEmail: "grace@google.com",
+            location: "San Francisco, CA",
             postedDate: "2025-01-01",
-            applied: true
+            applied: true,
+            description: "We are looking for a Staff Engineer to join our team. This is a great opportunity for someone who is passionate about building scalable and efficient web applications."
         }
     ];
 
