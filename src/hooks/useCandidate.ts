@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-type Candidate = {
+export type Candidate = {
     id: string;
     name: string;
     email: string;

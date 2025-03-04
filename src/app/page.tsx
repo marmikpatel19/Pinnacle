@@ -36,11 +36,11 @@ export default function Home() {
         <h1 className="self-start text-left mt-12 ml-4">
           Active Invitations:
         </h1>
-        <JobApps jobApps={candidate.jobs} applied={false} />
+        <JobApps jobApps={candidate.jobs} candidate={candidate} applied={false} />
         <h1 className="self-start text-left mt-4 ml-4 ">
           Past applications:
         </h1>
-        <JobApps jobApps={candidate.jobs} applied={true}/>
+        <JobApps jobApps={candidate.jobs} candidate={candidate} applied={true}/>
       </div>
     </div>
   );

@@ -25,3 +25,12 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+::-webkit-scrollbar {
+  display: none; 
+}
+
+html {
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
