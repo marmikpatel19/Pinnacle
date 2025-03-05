@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { useSearchParams, useRouter } from "next/navigation";
-import { Job } from '@/hooks/useCandidate';
 
 export default function JobPosting() {
   const searchParams = useSearchParams();
@@ -12,19 +11,80 @@ export default function JobPosting() {
   const pointOfContactEmail = searchParams.get("pointOfContactEmail");
   const location = searchParams.get("location");
   const postedDate = searchParams.get("postedDate");
-  const applied: boolean =  true ? searchParams.get("applied") === 'true' : false;
+  const [applied, setApplied] = useState<boolean>(true ? searchParams.get("applied") === 'true' : false)  
   const description = searchParams.get("description");
+  const jobGreenhouseId = searchParams.get("jobGreenhouseId");
   
-  const [candidateName, setCandidateName] = useState(searchParams.get("candidateName"));
+  const candidateGreenhouseId = searchParams.get("candidateGreenhouseId");
+  const candidateFirstName = searchParams.get("candidateFirstName");
+  const candidateLastName = searchParams.get("candidateLastName");
   const [candidateEmail, setCandidateEmail] = useState(searchParams.get("candidateEmail")); 
   const [candidatePhone, setCandidatePhone] = useState(searchParams.get("candidatePhone"));
   const [candidateLink, setCandidateLink] = useState(searchParams.get("candidateLink"));
-  const [candidateResume, setCandidateResume] = useState(searchParams.get("candidateResume"));
+  const [candidateResume, setCandidateResume] = useState(searchParams.get("candidateResume")); // stored in base64
+  const [candidateResumeFileName, setCandidateResumeFileName] = useState<string | null>(null);
 
   const router = useRouter();
   const [isEditOpen, setIsEditOpen] = useState(false);
 
   const toggleEdit = () => setIsEditOpen(!isEditOpen);
+
+  const submitApplication = async () => {
+    try {
+      const response = await fetch("/api/submitApplication", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          candidateGreenhouseId,
+          jobGreenhouseId,
+          candidateFirstName,
+          candidateLastName,
+          candidateEmail,
+          candidatePhone,
+          candidateLink,
+          candidateResume,
+          candidateResumeFileName,
+        }),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setApplied(true);
+        alert("Application submitted successfully!");
+        setIsEditOpen(false);
+      } else {
+        console.error("Application submission failed:", data.error);
+        alert("Failed to submit application.");
+      }
+    } catch (error) {
+      console.error("Error submitting application:", error);
+      alert("An error occurred while submitting.");
+    }
+  };
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const resume = event.target.files?.[0];
+    if (!resume) {
+        return;
+    }
+    if (resume.type !== "application/pdf") {
+      alert("PDF files only");
+      return;
+    }
+
+    setCandidateResumeFileName(resume.name);
+
+    const reader = new FileReader();
+    reader.readAsDataURL(resume);
+    reader.onload = () => {
+      if (typeof reader.result === "string") {
+        setCandidateResume(reader.result.split(",")[1]); 
+    };
+    reader.onerror = () => alert("Error reading file");
+  };
+};
 
   return (
     <div>
@@ -72,7 +132,7 @@ export default function JobPosting() {
                                 <p>Link:</p>
                                 <input type="url" value={candidateLink || ''} onChange={(e) => setCandidateLink(e.target.value)} className="border rounded-lg p-2 mb-2" />
                                 <p>Resume:</p>
-                                <input type="text" value={candidateResume || ''} onChange={(e) => setCandidateResume(e.target.value)} className="border rounded-lg p-2 mb-2" />          
+                                <input type="file" accept="application/pdf" onChange={handleFileChange} className="border rounded-lg p-2 mb-2 cursor-pointer w-57"/>          
                             </div>
                         </div>
                     </div>
@@ -81,6 +141,7 @@ export default function JobPosting() {
             
             <button 
                 disabled={applied}
+                onClick={() => submitApplication()}
                 className={`mt-4 border rounded-lg py-1 px-3 font-bold rounded self-start text-left mt-12 mb-4 ${
                     applied ? 'text-gray-400 cursor-default' : 'cursor-pointer'
                 }`}
@@ -91,4 +152,4 @@ export default function JobPosting() {
       </div>
     </div>
   );
-} 
+}

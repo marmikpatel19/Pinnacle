@@ -32,7 +32,7 @@ export default function Home() {
     <div>
       <h1 className="text-3xl font-bold ml-8 mt-8 gradient-text">Pinnacle</h1>
       <div className="max-w-xl w-full flex flex-col items-center text-center mx-auto">   
-        <h1 className="text-2xl mt-4 ">Welcome back, {candidate.name}</h1>
+        <h1 className="text-2xl mt-4 ">Welcome back, {candidate.firstName}</h1>
         <h1 className="self-start text-left mt-12 ml-4">
           Active Invitations:
         </h1>

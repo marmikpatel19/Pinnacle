@@ -5,7 +5,8 @@ import { useState, useEffect } from "react";
 export type Candidate = {
     id: string;
     greenhouseId: string;
-    name: string;
+    firstName: string;
+    lastName: string;
     email: string;
     phone: string | null;
     link: string | null;
@@ -64,7 +65,7 @@ const useCandidate = () => {
     const mockJobs: Job[] = [
         {
             id: "1",
-            greenhouseId: "4280249007",
+            greenhouseId: "4285367007",
             title: "Staff Engineer (ChatGPT Premium)",
             company: "OpenAI",
             pointOfContact: "Kalie Scoren",
@@ -76,7 +77,7 @@ const useCandidate = () => {
         },
         {
             id: "2",
-            greenhouseId: "4280249007",
+            greenhouseId: "4285367007",
             title: "Member of Technical Staff", 
             company: "Anthropic",
             pointOfContact: "Arjun Shubham",
@@ -88,7 +89,7 @@ const useCandidate = () => {
         },
         {
             id: "3",
-            greenhouseId: "4280249007",
+            greenhouseId: "4285367007",
             title: "Staff Engineer", 
             company: "Paraform",
             pointOfContact: "Linus Lu",
@@ -100,7 +101,7 @@ const useCandidate = () => {
         },
         {
             id: "4",
-            greenhouseId: "4280249007",
+            greenhouseId: "4285367007",
             title: "Staff Engineer", 
             company: "Meta",
             pointOfContact: "Jason Liu",
@@ -112,7 +113,7 @@ const useCandidate = () => {
         },
         {
             id: "5",
-            greenhouseId: "4280249007",
+            greenhouseId: "4285367007",
             title: "Staff Engineer (Backend)", 
             company: "Google",
             pointOfContact: "Grace Wong",
@@ -128,7 +129,8 @@ const useCandidate = () => {
         candidate: {
             id: "123",
             greenhouseId: "4280249007",
-            name: "Jeffrey",
+            firstName: "Jeffrey",
+            lastName: "Li",
             email: "Jeffrey@paraform.com",
             phone: "+1234567890",
             link: "https://x.com/lijeffrey39",
