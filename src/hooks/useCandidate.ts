@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 export type Candidate = {
     id: string;
+    greenhouseId: string;
     name: string;
     email: string;
     phone: string | null;
@@ -14,6 +15,7 @@ export type Candidate = {
 
 export type Job = {
     id: string;
+    greenhouseId: string;
     title: string;
     company: string;
     pointOfContact: string;
@@ -62,6 +64,7 @@ const useCandidate = () => {
     const mockJobs: Job[] = [
         {
             id: "1",
+            greenhouseId: "4280249007",
             title: "Staff Engineer (ChatGPT Premium)",
             company: "OpenAI",
             pointOfContact: "Kalie Scoren",
@@ -73,6 +76,7 @@ const useCandidate = () => {
         },
         {
             id: "2",
+            greenhouseId: "4280249007",
             title: "Member of Technical Staff", 
             company: "Anthropic",
             pointOfContact: "Arjun Shubham",
@@ -84,6 +88,7 @@ const useCandidate = () => {
         },
         {
             id: "3",
+            greenhouseId: "4280249007",
             title: "Staff Engineer", 
             company: "Paraform",
             pointOfContact: "Linus Lu",
@@ -95,6 +100,7 @@ const useCandidate = () => {
         },
         {
             id: "4",
+            greenhouseId: "4280249007",
             title: "Staff Engineer", 
             company: "Meta",
             pointOfContact: "Jason Liu",
@@ -106,6 +112,7 @@ const useCandidate = () => {
         },
         {
             id: "5",
+            greenhouseId: "4280249007",
             title: "Staff Engineer (Backend)", 
             company: "Google",
             pointOfContact: "Grace Wong",
@@ -120,6 +127,7 @@ const useCandidate = () => {
     return {
         candidate: {
             id: "123",
+            greenhouseId: "4280249007",
             name: "Jeffrey",
             email: "Jeffrey@paraform.com",
             phone: "+1234567890",
