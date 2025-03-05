@@ -4,7 +4,11 @@
   - Candidate (B2C)–primary user since this is for submitting basic apps
   - (for the future–not for this project: Companies hiring (B2B)--secondary users who seek to control jobs for their company)
 - Branding & features
+
   - Let’s build something more luxurious, high-quality, high-end clients. This sounds different than recruitment platforms usually ⇒ fun, interesting.
+
+    - Pinnacle: an exclusive recruitment platform for high-quality candidates. There are no public job postings; instead, candidates only see roles that they have been specifically invited to apply to!
+
   - Basic persona (candidate):
     - Sophia Chen, Staff Machine Learning Engineer, ex-Google Brain, now exploring leadership roles in AI startups.
     - Pain Points:

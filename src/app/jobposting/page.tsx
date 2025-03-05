@@ -3,7 +3,6 @@
 import React, { useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from "next/navigation";
 
-// This is the main page component
 export default function JobPosting() {
   return (
     <div>
@@ -15,7 +14,6 @@ export default function JobPosting() {
   );
 }
 
-// This is the component that uses search params
 function JobPostingContent() {
   const searchParams = useSearchParams();
   const title = searchParams.get("title");
