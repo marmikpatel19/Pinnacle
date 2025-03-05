@@ -88,7 +88,7 @@ export default function JobPosting() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold ml-8 mt-8 gradient-text">Pinnacle</h1>
+      <h1 className="text-3xl font-bold ml-8 mt-8 gradient-text cursor-pointer" onClick={() => window.location.href = "/"}>Pinnacle</h1>
       <div className="max-w-2xl w-full flex flex-col mx-auto">
         <div>
             <button 

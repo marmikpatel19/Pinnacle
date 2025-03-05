@@ -30,7 +30,7 @@ export default function Home() {
   
   return (
     <div>
-      <h1 className="text-3xl font-bold ml-8 mt-8 gradient-text">Pinnacle</h1>
+      <h1 className="text-3xl font-bold ml-8 mt-8 gradient-text cursor-pointer" onClick={() => window.location.href = "/"}>Pinnacle</h1>
       <div className="max-w-xl w-full flex flex-col items-center text-center mx-auto">   
         <h1 className="text-2xl mt-4 ">Welcome back, {candidate.firstName}</h1>
         <h1 className="self-start text-left mt-12 ml-4">
