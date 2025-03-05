@@ -89,7 +89,7 @@ export default function JobPosting() {
   return (
     <div>
       <h1 className="text-3xl font-bold ml-8 mt-8 gradient-text cursor-pointer" onClick={() => window.location.href = "/"}>Pinnacle</h1>
-      <div className="max-w-2xl w-full flex flex-col mx-auto">
+      <div className="max-w-2xl w-full flex flex-col mx-auto px-4 sm:px-0">
         <div>
             <button 
                 onClick={() => router.push('/')} 
@@ -98,21 +98,21 @@ export default function JobPosting() {
                 Back
             </button>
         </div>
-        <div className="max-w-2xl w-full mx-auto mb-4 p-4 border rounded-lg">
-            <div className="flex flex-row justify-between">
+        <div className="max-w-2xl w-full mx-auto mb-4 p-3 sm:p-4 border rounded-lg">
+            <div className="flex flex-col sm:flex-row justify-between space-y-4 sm:space-y-0">
                 <div className="flex flex-col items-start">
                     <p className="text-2xl font-bold">{title}</p>
-                    <p>{company} | {location} | {postedDate}</p>
-                    <p className="mt-4 max-w-md">{description}</p>
+                    <p className="text-sm sm:text-base">{company} | {location} | {postedDate}</p>
+                    <p className="mt-4 max-w-md text-sm sm:text-base">{description}</p>
                 </div>
-                <div className="flex flex-col items-end">
+                <div className="flex flex-col items-start sm:items-end">
                     <p>Point of Contact:</p>
                     <p>{pointOfContact}</p>
                     <a href={`mailto:${pointOfContactEmail}`} className='underline'>{pointOfContactEmail}</a>
                 </div>    
             </div>    
             
-            <div className="flex flex-col mt-4">
+            <div className="flex flex-col mt-6">
                 <p 
                     onClick={toggleEdit} 
                     className="underline cursor-pointer"
@@ -120,19 +120,19 @@ export default function JobPosting() {
                     Edit Application <span className="text-xs">{isEditOpen ? '▲' : '▼'}</span>
                 </p>
                 {isEditOpen && (
-                    <div className="mt-2">
-                        <div className="flex flex-row">
-                            <div className="flex flex-col items-start">
+                    <div className="mt-4">
+                        <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                            <div className="flex flex-col items-start w-full sm:w-1/2">
                                 <p>Email:</p>
-                                <input type="email" value={candidateEmail || ''} onChange={(e) => setCandidateEmail(e.target.value)} className="border rounded-lg p-2 mb-2" />
+                                <input type="email" value={candidateEmail || ''} onChange={(e) => setCandidateEmail(e.target.value)} className="border rounded-lg p-2 mb-2 w-full" />
                                 <p>Phone:</p>
-                                <input type="tel" value={candidatePhone || ''} onChange={(e) => setCandidatePhone(e.target.value)}  className="border rounded-lg p-2 mb-2" />
+                                <input type="tel" value={candidatePhone || ''} onChange={(e) => setCandidatePhone(e.target.value)}  className="border rounded-lg p-2 mb-2 w-full" />
                             </div>
-                            <div className="flex flex-col items-start pl-10">
+                            <div className="flex flex-col items-start w-full sm:w-1/2">
                                 <p>Link:</p>
-                                <input type="url" value={candidateLink || ''} onChange={(e) => setCandidateLink(e.target.value)} className="border rounded-lg p-2 mb-2" />
+                                <input type="url" value={candidateLink || ''} onChange={(e) => setCandidateLink(e.target.value)} className="border rounded-lg p-2 mb-2 w-full" />
                                 <p>Resume:</p>
-                                <input type="file" accept="application/pdf" onChange={handleFileChange} className="border rounded-lg p-2 mb-2 cursor-pointer w-57"/>          
+                                <input type="file" accept="application/pdf" onChange={handleFileChange} className="border rounded-lg p-2 mb-2 cursor-pointer w-full"/>          
                             </div>
                         </div>
                     </div>
@@ -142,7 +142,7 @@ export default function JobPosting() {
             <button 
                 disabled={applied}
                 onClick={() => submitApplication()}
-                className={`mt-4 border rounded-lg py-1 px-3 font-bold rounded self-start text-left mt-12 mb-4 ${
+                className={`mt-6 border rounded-lg py-1 px-3 font-bold rounded self-start text-left ${
                     applied ? 'text-gray-400 cursor-default' : 'cursor-pointer'
                 }`}
             >
